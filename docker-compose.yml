@@ -16,7 +16,7 @@ services:
 
   departement_app:
     build: ./
-    image: aymen
+    image: aymen-5nids2-g0
     restart: unless-stopped
     ports:
       - 8089:8089
