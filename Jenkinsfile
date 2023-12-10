@@ -44,7 +44,7 @@ environment {
                               sh 'docker tag aymen-5nids2-g0-test aymen002/ay-5nids2-g0:1.0.0'
                               sh 'docker push aymen002/ay-5nids2-g0:1.0.0'
                           }
-                      }*/
+                      }
                stage('Docker Compose') {
                                   steps {
                                       sh 'docker compose up -d'
