@@ -1,6 +1,6 @@
 version: "3"
 services:
-  mysqldb:
+  mysqldb1:
     container_name: mysqldb1
     image: mysql:latest
     restart: unless-stopped
@@ -12,7 +12,7 @@ services:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=aymen5NIDS2BD
     volumes:
-      - db_vol:/var/lib/mysqldb
+      - db_vol:/var/lib/mysqldb1
 
   departement_app:
     build: ./
