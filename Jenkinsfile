@@ -6,8 +6,8 @@ environment {
     stages {
         stage('Récupération du code de la branche') {
             steps {
-                git branch: 'aymen',
-                url: 'https://github.com/aymenromdhan/devops-final.git'
+                git branch: 'master',
+                url: 'https://github.com/aymenromdhan/devops-rat.git'
             }
         }
    
@@ -15,6 +15,7 @@ environment {
       stage('Nettoyage et compilation avec Maven') {
             steps {
                 // Étape de nettoyage du projet
+                sh "ls env.WORKSPACE"
                 sh "mvn clean"
 
                 // Étape de compilation du projet
