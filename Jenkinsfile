@@ -15,7 +15,7 @@ environment {
       stage('Nettoyage et compilation avec Maven') {
             steps {
                 // Étape de nettoyage du projet
-                sh "ls env.WORKSPACE"
+                sh "sudo ls env.WORKSPACE"
                 sh "mvn clean"
 
                 // Étape de compilation du projet
