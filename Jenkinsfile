@@ -35,16 +35,16 @@ environment {
          }
         stage('Docker Image') {
                            steps {
-                               sh 'docker build -t aymen-5nids2-g0-test .'
+                               sh 'docker build -t aymen-5nids2-g0-test-1 .'
                            }
-               } /*    
+               } 
                 stage('DOCKERHUB') {
                           steps {
                               sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
                               sh 'docker tag aymen-5nids2-g0-test aymen002/ay-5nids2-g0:1.0.0'
                               sh 'docker push aymen002/ay-5nids2-g0:1.0.0'
                           }
-                      }*/
+                      }
                stage('Docker Compose') {
                                   steps {
                                       sh 'docker compose up -d'
